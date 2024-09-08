@@ -15,6 +15,15 @@ class TestPublicacion(unittest.TestCase):
         valor_actual = mi_cuenta.multiplicar(3, 5)
         self.assertEqual(valor_esperado, valor_actual)
     '''
-        
+    def test_set_titulo(self):
+        publicacion = Publicacion()
+        publicacion.set_titulo("Jeferson Bobis")
+        self.assertEqual("Jeferson Bobis", publicacion.get_titulo())
+
+    def test_set_ano_publicacion(self):
+        publicacion = Publicacion()
+        publicacion.set_ano_publicacion(2023)
+        self.assertEqual(2023, publicacion.get_ano_publicacion())
+
 if __name__ == '__main__':
     unittest.main()
